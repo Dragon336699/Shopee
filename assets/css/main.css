@@ -199,6 +199,7 @@
     will-change: opacity, transform;
     display: none;
     z-index: 2;
+    border-radius: 2px;
 }
 
 .header__notify::before {
@@ -464,6 +465,11 @@
 
 }
 
+.header-logo-link {
+    text-decoration: none;
+    color: transparent;
+}
+
 .header__logo-img {
     width: 162px;
     height: 50px;
@@ -562,7 +568,7 @@
     display: none;
     position: absolute;
     right: 0;
-    top:100%;
+    top: calc(100% - 2px);
     list-style: none;
     background-color: var(--white-color);
     padding-left: 0;
