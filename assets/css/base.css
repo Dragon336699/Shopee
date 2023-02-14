@@ -48,7 +48,23 @@ body {
 .grid__row {
     display: flex;
     flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right:-12px;
 }
+
+/* Test */
+.grid-column-2 {
+    width: 16.6667%;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.rid-column-8 {
+    width: 83.3334%;
+    padding-left: 12px;
+        padding-right: 12px;
+}
+
 
 .opacity:hover {
     cursor: pointer;
