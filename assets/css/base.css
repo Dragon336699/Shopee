@@ -59,10 +59,10 @@ body {
     padding-right: 12px;
 }
 
-.rid-column-8 {
+.grid-column-10 {
     width: 83.3334%;
     padding-left: 12px;
-        padding-right: 12px;
+    padding-right: 12px;
 }
 
 
@@ -137,6 +137,10 @@ i {
     cursor: pointer;
     border-radius: 2px;
     font-size: 1.2rem;
+}
+
+.btn--primary {
+    background-color: var(--primary-color) !important;
 }
 
 .auth-form__other {
