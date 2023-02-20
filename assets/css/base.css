@@ -13,6 +13,7 @@
     --black-color: #000;
     --text-color: #333;
     --hover-color:#ee4d2d;
+    --star-gold-color: #FFCE3D;
 
     --navbar-height: 46px;
     --header-height: 120px;
@@ -48,21 +49,27 @@ body {
 .grid__row {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -12px;
-    margin-right:-12px;
+    margin-left: -5px;
+    margin-right:-5px;
 }
 
 /* Test */
 .grid-column-2 {
     width: 16.6667%;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.grid-column-2-4 {
+    width: 20%;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .grid-column-10 {
     width: 83.3334%;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 
@@ -154,6 +161,55 @@ i {
 .auth-form__socials {
 
 }
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.pagination-item {
+    margin: 0 12px;
+}
+
+.pagination-item__link--active .pagination-item__link {
+    background-color: var(--primary-color);
+    color: var(--white-color)!important;
+}
+
+.pagination-item__link--active:hover .pagination-item__link {
+    background-color: #ed5c3f;
+}
+
+.pagination-item__link {
+    --height: 30px;
+    text-decoration: none;
+    font-size: 2rem;
+    color: #939393;
+    min-width: 40px;
+    height: var(--height);
+    display: block;
+    text-align: center;
+    line-height: var(--height);
+}
+
+.pagination-item__link-etc {
+    cursor: default;
+}
+
+.pagination-item__link:hover {
+    color: var(--primary-color);
+}
+
+.pagination-item__link:hover i {
+    color: #939393;
+}
+
+
+
+
+
 
 
 
