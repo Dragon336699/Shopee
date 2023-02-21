@@ -1295,6 +1295,81 @@ i.home-product-item-like-icon-fill {
     
 }
 
+.footer__heading {
+
+}
+
+.footer-list {
+    padding-left:0;
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+.footer-item {
+    /* line-height: 2.8rem; */
+}
+
+.footer-item__link {
+    text-decoration: none;
+    color: #585858;
+}
+
+/* .footer-item__link:hover {
+    color: var(--primary-color);
+} */
+
+.footer-list-img {
+    padding-left:0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-item-pay {
+
+}
+
+
+
+.footer__country {
+    border-top: 1px solid #E1E1E1;
+    padding: 40px 0;
+    margin-top:32px;
+    font-size: 1.4rem;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.footer__text {
+    color: #737373;
+}
+
+.footer__country-list {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer__country-item:first-child {
+    cursor: text;
+    border: none;
+}
+
+.footer__country-item {
+    padding: 0 6px;
+    border-right: 1px solid #C9C9C9;
+    cursor: pointer;
+    color: #737373;
+}
+
+.footer__country-item:last-child {
+    border: none;
+}
+
+.footer__country-item {
+
+}
+
 
 
 
