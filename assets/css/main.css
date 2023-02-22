@@ -1292,11 +1292,14 @@ i.home-product-item-like-icon-fill {
 
 /* Footer */
 .footer {
-    
+    border-top: 4px solid var(--primary-color);
+    padding-top:24px;
 }
 
 .footer__heading {
-
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: var(--text-color);
 }
 
 .footer-list {
@@ -1307,16 +1310,33 @@ i.home-product-item-like-icon-fill {
 
 .footer-item {
     /* line-height: 2.8rem; */
+    padding: 8px 0;
+    display: flex;
+    color: #585858;
 }
 
 .footer-item__link {
     text-decoration: none;
     color: #585858;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
 }
 
-/* .footer-item__link:hover {
+.footer-item__link:hover {
     color: var(--primary-color);
-} */
+}
+
+.footer-item__icon:hover ~ a {
+    color: var(--primary-color);
+}
+
+.footer-item__icon {
+    font-size: 1.7rem;
+    margin-top:-1px;
+    padding-right: 8px;
+    cursor: pointer;
+}
 
 .footer-list-img {
     padding-left:0;
@@ -1326,22 +1346,28 @@ i.home-product-item-like-icon-fill {
 }
 
 .footer-item-pay {
-
+    margin: 6px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 
 
-.footer__country {
+.footer__bottom {
     border-top: 1px solid #E1E1E1;
     padding: 40px 0;
     margin-top:32px;
     font-size: 1.4rem;
+    display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
 }
 
 .footer__text {
     color: #737373;
+}
+
+.footer__country {
+    flex-wrap: nowrap;
 }
 
 .footer__country-list {
@@ -1367,9 +1393,38 @@ i.home-product-item-like-icon-fill {
 }
 
 .footer__country-item {
-
+    display: flex;
+    align-items: center;
+    text-align: center;
+    max-height: 50px;
 }
 
+.footer__download {
+    display: flex;
+    align-items: center;
+}
+
+.footer__download-qr {
+    width: 80px;
+    height: 80px;
+    padding: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.footer__download-apps {
+    margin-left:16px;
+}
+
+.footer__download-app-img {
+    height: 24px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    margin: 4px 0;
+    padding: 4px;
+}
+
+.footer__download-app-link {
+    text-decoration: none;
+}
 
 
 
