@@ -306,9 +306,17 @@
     text-align: center;
 }
 
-.auth-form {
+.auth-form {    
     width: 420px;
     min-height: 450px;
+    display: none;
+}
+
+.register__form {
+    display: none;
+}
+
+.login__form{
     display: none;
 }
 
