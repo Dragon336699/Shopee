@@ -85,16 +85,14 @@
     color: darkturquoise;
 }
 
-
-
-
 /* Sign up  */
 .header__navbar-item {
     margin: 0 8px;
 }
 
 .header__navbar-item:hover .header__notify  {
-    display: block;
+    /* display: block; */
+    scale: 1;
 }
 
 .header__navbar-item--qr:hover .header__qr {
@@ -123,6 +121,10 @@
     display: inline-flex;
     align-items: center;
     text-decoration: none;
+}
+
+.header__navbar-item-link {
+    z-index: 3;
 }
 
 .header__navbar {
@@ -198,9 +200,11 @@
     width: 404px;
     border: 1px solid #d3d3d3;
     transform-origin: calc(100% - 20px) top ;
-    animation: headerNotifyGrow ease-in .2s ;
+    /* animation: headerNotifyGrow ease-in .2s ; */
+    transition: scale linear .1s ;
     will-change: opacity, transform;
-    display: none;
+    /* display: none; */
+    scale: 0;
     z-index: 2;
     border-radius: 2px;
 }
@@ -1435,6 +1439,7 @@ i.home-product-item-like-icon-fill {
 .footer__download-app-link {
     text-decoration: none;
 }
+
 
 
 

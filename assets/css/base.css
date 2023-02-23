@@ -107,6 +107,16 @@ i {
     }
 }
 
+@keyframes dissapear {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(0);
+    }
+}
+
 /* Modal */
 .modal {
     position: fixed;
