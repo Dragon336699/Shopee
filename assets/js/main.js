@@ -47,3 +47,29 @@ for (var buttonFilter of buttonFilters){
         filterClicked.classList.add('btn--active')
     }
 }
+
+var unLike = document.querySelectorAll('.home-product-item-like-icon-empty');
+var liked = document.querySelectorAll('.home-product-item-like-icon-fill');
+for (let like in liked){
+    liked[like].onclick = function (event) {
+        unLike[like].style.display = 'block';
+        liked[like].style.display = 'none';
+        event.stopPropagation();
+        event.preventDefault ();
+    }
+}
+
+for (let like in unLike){
+    unLike[like].onclick = function (event){
+        liked[like].style.display = 'block';
+        unLike[like].style.display = 'none';
+        event.stopPropagation();
+        event.preventDefault ();
+    }
+}
+
+var product = document.querySelectorAll('.home-product-item');
+product.onclick = function (event) {
+  }
+
+

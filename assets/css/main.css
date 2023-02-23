@@ -1110,6 +1110,7 @@
     will-change: transform;
     text-decoration: none;
     display: block;
+    color: var(--text-color);
 }
 
 .home-product-item:hover {
@@ -1174,11 +1175,11 @@
 }
 
 .home-product-item__liked .home-product-item-like-icon-empty {
-    display: none;
+    display: block;
 }
 
 .home-product-item__liked .home-product-item-like-icon-fill {
-    display: block;
+    display: none;
 }
 
 .home-product-item-like-icon-empty {
