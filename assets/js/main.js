@@ -86,3 +86,19 @@ headerIcon.onclick = function(){
         headerCheckbox.checked[0] = true;
     }
 }
+
+// Checkbox header cart
+
+// var headerCart = $('.header__cart')
+// var headerCartCheckbox = $("#header__cart-checkbox")
+// headerCart.onclick = function(){
+//     if (headerCartCheckbox.checked === true){
+//         headerCartCheckbox.checked = false
+//         console.log(headerCartCheckbox.checked)
+//     }
+//     else {
+//         headerCartCheckbox.checked = true;
+//         console.log(headerCartCheckbox.checked)
+
+//     }
+// }

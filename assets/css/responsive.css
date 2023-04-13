@@ -62,8 +62,13 @@
         --navbar-height: 0px;
         --header-height: 66px;
     }
+
     .hide-on-mobile {
         display: none;
+    }
+
+    .header-logo-link {
+        -webkit-tap-highlight-color: transparent;
     }
 
     .header-with-search {
@@ -172,15 +177,12 @@
         display: flex;
         flex-direction: column;
     }
-    /* @keyframes headerSearchSlideIn {
-        from {
-            opacity: 0;
-            top: calc(var(--header-height)/2);
-        }
+    /* Checkbox header cart  */
 
-        to {
-            opacity: 1;
-            top: var(--header-height);
-        }
+    /* #header__cart-checkbox:checked ~ .header__cart-wrap .header__cart-list{
+        display: block;
+    }
+    #header__cart-checkbox:not(:checked) ~ .header__cart-wrap .header__cart-list{
+        display: none;
     } */
 }
