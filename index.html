@@ -20,38 +20,6 @@
 
 <body>
     <div class="app">
-        <div class="header__search-mobile header__search hide-on-pc">
-            <div class="header__search-input-wrap">
-                <input placeholder="Nhập để tìm kiếm sản phẩm" type="text" class="header__search-input">
-                <!-- Search history -->
-                <div class="header__search-history">
-                    <h3 class="header__serach-history-heading">Lịch sử tìm kiếm</h3>
-                    <ul class="header__serach-history-list">
-                        <li class="header__serach-history-item"><a href="">Chuột logitech</a></li>
-                        <li class="header__serach-history-item"><a href="">Bàn phím</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="header__search-select">
-                <span class="header__search-select-label">Trong nước</span>
-                <i class="header__search-select-icon fa-solid fa-angle-down"></i>
-                <ul class="header__search-option">
-                    <li class="header__search-option-item">
-                        <span>Trong nước</span>
-                        <i class="header__search-option-icon fa-solid fa-check"></i>
-                    </li>
-                    <li class="header__search-option-item">
-                        <span>Ngoài nước</span>
-                        <i class="header__search-option-icon fa-solid fa-check"></i>
-                    </li>
-                </ul>
-            </div>
-
-            <button class="header__search-btn opacity">
-                <i class="header__search-btn-icon fa-solid fa-magnifying-glass"></i></button>
-        </div>
-
         <header class="header">
             <div class="grid wide">
                 <nav class="header__navbar hide-on-mobile-tablet">
@@ -163,7 +131,7 @@
                 </nav>
                 <!-- Header with search -->
                 <div class="header-with-search">
-                    <label for="mobile__search-checkbox" class="header-icon-mobile hide-on-pc">
+                    <label for="mobile__search-checkbox" class="header-icon-mobile hide-on-pc hide-on-tablet">
                         <i class="header-search-icon fa-solid fa-magnifying-glass"></i>
                     </label>
                     <div class="header-logo hide-on-tablet">
@@ -177,7 +145,6 @@
                             </svg>
                         </a>
                     </div>
-                    <input type="checkbox" hidden id="mobile__search-checkbox" class="header__search-checkbox">
                     <div class="header__search hide-on-mobile">
                         <div class="header__search-input-wrap">
                             <input placeholder="Nhập để tìm kiếm sản phẩm" type="text" class="header__search-input">
@@ -362,25 +329,59 @@
 
                 </div>
             </div>
-            <div class="header-tablet-sort-bar">
-                <ul class="header-tablet-sort-bar-list">
-                    <li class="header-tablet-sort-bar-item">
-                        <a href="" class="header-tablet-sort-bar-link">Liên quan</a>
-                    </li>
-                    <li class="header-tablet-sort-bar-item header-tablet-sort-bar-item--active">
-                        <a href="" class="header-tablet-sort-bar-link">Mới nhất</a>
-                    </li>
-                    <li class="header-tablet-sort-bar-item">
-                        <a href="" class="header-tablet-sort-bar-link">Bán chạy</a>
-                    </li>
-                    <li class="header-tablet-sort-bar-item">
-                        <a href="" class="header-tablet-sort-bar-link">Giá</a>
-                    </li>
-                </ul>
-            </div>
         </header>
 
+        <div class="header-tablet-sort-bar">
+            <ul class="header-tablet-sort-bar-list">
+                <li class="header-tablet-sort-bar-item">
+                    <a href="" class="header-tablet-sort-bar-link">Liên quan</a>
+                </li>
+                <li class="header-tablet-sort-bar-item header-tablet-sort-bar-item--active">
+                    <a href="" class="header-tablet-sort-bar-link">Mới nhất</a>
+                </li>
+                <li class="header-tablet-sort-bar-item">
+                    <a href="" class="header-tablet-sort-bar-link">Bán chạy</a>
+                </li>
+                <li class="header-tablet-sort-bar-item">
+                    <a href="" class="header-tablet-sort-bar-link">Giá</a>
+                </li>
+            </ul>
+        </div>
+
         <div class="app__container">
+            <input type="checkbox" hidden id="mobile__search-checkbox" class="header__search-checkbox">
+            <div class="header__search-mobile header__search hide-on-pc hide-on-tablet">
+                <div class="header__search-input-wrap">
+                    <input placeholder="Nhập để tìm kiếm sản phẩm" type="text" class="header__search-input">
+                    <!-- Search history -->
+                    <div class="header__search-history">
+                        <h3 class="header__serach-history-heading">Lịch sử tìm kiếm</h3>
+                        <ul class="header__serach-history-list">
+                            <li class="header__serach-history-item"><a href="">Chuột logitech</a></li>
+                            <li class="header__serach-history-item"><a href="">Bàn phím</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Search mobile -->
+                <div class="header__search-select">
+                    <span class="header__search-select-label">Trong nước</span>
+                    <i class="header__search-select-icon fa-solid fa-angle-down"></i>
+                    <ul class="header__search-option">
+                        <li class="header__search-option-item">
+                            <span>Trong nước</span>
+                            <i class="header__search-option-icon fa-solid fa-check"></i>
+                        </li>
+                        <li class="header__search-option-item">
+                            <span>Ngoài nước</span>
+                            <i class="header__search-option-icon fa-solid fa-check"></i>
+                        </li>
+                    </ul>
+                </div>
+
+                <button class="header__search-btn opacity">
+                    <i class="header__search-btn-icon fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
             <div class="grid wide">
                 <div class="row sm-gutter app__content">
                     <div class="col l-2 m-0 c-0">
@@ -437,6 +438,56 @@
                                 </div>
                             </div>
                         </div>
+
+                        <nav class="mobile-category hide-on-pc">
+                            <ul class="mobile-category__list">
+                                <li class="mobile-category__item    ">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                            </ul>
+                        </nav>
 
                         <div class="home-product">
                             <div class="row sm-gutter">
@@ -1218,26 +1269,26 @@
                         <h3 class="footer__heading">Theo dõi chúng tôi trên</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
-                                <i class="footer-item__icon fa-brands fa-facebook"></i>
                                 <a href="" class="footer-item__link">
+                                <i class="footer-item__icon fa-brands fa-facebook"></i>
                                     Facebook
                                 </a>
                             </li>
                             <li class="footer-item">
-                                <i class="footer-item__icon fa-brands fa-instagram"></i>
                                 <a href="" class="footer-item__link">
+                                    <i class="footer-item__icon fa-brands fa-instagram"></i>
                                     Instagram
                                 </a>
                             </li>
                             <li class="footer-item">
-                                <i class="footer-item__icon fa-brands fa-linkedin"></i>
                                 <a href="" class="footer-item__link">
+                                    <i class="footer-item__icon fa-brands fa-linkedin"></i>
                                     Linkedln
                                 </a>
                             </li>
                         </ul>
                     </div>
-                    <div class="col l-2-4 m-4 c-6">
+                    <div class="col l-2-4 m-4 c-6 footer__download-mobile">
                         <h3 class="footer__heading">Tải ứng dụng Shopee ngay</h3>
                         <div class="footer__download">
                             <img src="./assets/img/QR%20CODE.png" alt="Download QR" class="footer__download-qr">

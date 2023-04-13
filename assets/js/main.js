@@ -72,6 +72,17 @@ var product = document.querySelectorAll('.home-product-item');
 product.onclick = function (event) {
   }
 
+var $ = document.querySelector.bind(document)
+var $$ = document.querySelectorAll.bind(document)
 
 // Check box search on mobile
-
+var headerIcon = document.querySelector(".header-icon-mobile");
+var headerCheckbox = $(".header__search-checkbox")
+headerIcon.onclick = function(){
+    if (headerCheckbox.checked === true){
+        headerCheckbox.checked[0] = false
+    }
+    else {
+        headerCheckbox.checked[0] = true;
+    }
+}

@@ -7,10 +7,6 @@
 
 /* Mobile & Tablet */
 @media (max-width: 1023px) {
-    :root {
-        --navbar-height: 0px;
-        --header-height: 80px;
-    }
 
     .hide-on-mobile-tablet {
         display: none;
@@ -37,10 +33,23 @@
     .header-tablet-sort-bar {
         display: block;
     }
+
+    .app__content {
+        margin: 0 4px;
+        padding-top: 8px;
+    }
+
+    .header__cart {
+        -webkit-tap-highlight-color: transparent;
+    }
 }
 
 /* Tablet */
 @media (min-width: 740px) and (max-width: 1023px) {
+    :root {
+        --navbar-height: 0px;
+        --header-height: 80px;
+    }
     .hide-on-tablet {
         display: none;
     }
@@ -49,6 +58,10 @@
 /* Mobile */
 
 @media (max-width: 739px) {
+    :root {
+        --navbar-height: 0px;
+        --header-height: 66px;
+    }
     .hide-on-mobile {
         display: none;
     }
@@ -69,16 +82,22 @@
     .header__search-mobile {
         height: var(--header-search-height-mobile);
         position: fixed;
-        top: calc(var(--header-height)/2);
+        top: 0;
         left: 0;
         right: 0;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
         padding: 0 16px;
         transition: all ease-in .2s;
+        z-index: 3;
     }
 
     .header__search-select {
         line-height: var(--header-search-height-mobile);
+    }
+
+    .header__cart-list {
+        max-width: 400px;
+        width: 50vh;
     }
 
     .pagination-item__link {
@@ -91,8 +110,68 @@
         margin: 0;
     }
 
+    .app__content {
+        margin: 0 4px;
+    }
 
+    .footer__bottom {
+        margin-right: 0;
+    }
 
+    .footer__country {
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    .footer__country-list {
+        flex-wrap: wrap;
+    }
+
+    .footer__country-item {
+        display: flex;
+        justify-content: center;
+        margin-top: 12px;
+        min-width: 20%;
+        min-height: 32px;
+        flex: 1;
+    }
+
+    .footer__country-item:nth-of-type(5n) {
+        border: none;
+    }
+
+    .footer .grid .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .footer__heading {
+        text-align: center;
+    }
+
+    .footer-item__link {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-list-img {
+        justify-content: center;
+    }
+
+    .footer__download-mobile {
+        min-width: 100%;
+        max-width: 0;
+    }
+
+    .footer__download {
+        justify-content: center;
+    }
+
+    .footer__download-apps {
+        display: flex;
+        flex-direction: column;
+    }
     /* @keyframes headerSearchSlideIn {
         from {
             opacity: 0;
