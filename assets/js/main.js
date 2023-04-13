@@ -73,3 +73,5 @@ product.onclick = function (event) {
   }
 
 
+// Check box search on mobile
+

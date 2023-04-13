@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
@@ -18,9 +20,41 @@
 
 <body>
     <div class="app">
+        <div class="header__search-mobile header__search hide-on-pc">
+            <div class="header__search-input-wrap">
+                <input placeholder="Nhập để tìm kiếm sản phẩm" type="text" class="header__search-input">
+                <!-- Search history -->
+                <div class="header__search-history">
+                    <h3 class="header__serach-history-heading">Lịch sử tìm kiếm</h3>
+                    <ul class="header__serach-history-list">
+                        <li class="header__serach-history-item"><a href="">Chuột logitech</a></li>
+                        <li class="header__serach-history-item"><a href="">Bàn phím</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="header__search-select">
+                <span class="header__search-select-label">Trong nước</span>
+                <i class="header__search-select-icon fa-solid fa-angle-down"></i>
+                <ul class="header__search-option">
+                    <li class="header__search-option-item">
+                        <span>Trong nước</span>
+                        <i class="header__search-option-icon fa-solid fa-check"></i>
+                    </li>
+                    <li class="header__search-option-item">
+                        <span>Ngoài nước</span>
+                        <i class="header__search-option-icon fa-solid fa-check"></i>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="header__search-btn opacity">
+                <i class="header__search-btn-icon fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
         <header class="header">
-            <div class="grid">
-                <nav class="header__navbar">
+            <div class="grid wide">
+                <nav class="header__navbar hide-on-mobile-tablet">
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar-item--qr header__navbar-item--separate opacity ">
                             Vào cửa hàng trên ứng dụng
@@ -119,14 +153,20 @@
 
                         <!-- Sign up -->
 
-                        <li class="header__navbar-item header__navbar-item--sign-up header__navbar-item--strong header__navbar-item--separate opacity">Đăng ký</li>
-                        <li class="header__navbar-item header__navbar-item--sign-in header__navbar-item--strong opacity">Đăng nhập</li>
+                        <li
+                            class="header__navbar-item header__navbar-item--sign-up header__navbar-item--strong header__navbar-item--separate opacity">
+                            Đăng ký</li>
+                        <li
+                            class="header__navbar-item header__navbar-item--sign-in header__navbar-item--strong opacity">
+                            Đăng nhập</li>
                     </ul>
                 </nav>
-
                 <!-- Header with search -->
                 <div class="header-with-search">
-                    <div class="header-logo">
+                    <label for="mobile__search-checkbox" class="header-icon-mobile hide-on-pc">
+                        <i class="header-search-icon fa-solid fa-magnifying-glass"></i>
+                    </label>
+                    <div class="header-logo hide-on-tablet">
                         <a href="/" class="header-logo-link">
                             <svg viewBox="0 0 192 65" class="header__logo-img">
                                 <g fill-rule="evenodd">
@@ -137,8 +177,8 @@
                             </svg>
                         </a>
                     </div>
-
-                    <div class="header__search">
+                    <input type="checkbox" hidden id="mobile__search-checkbox" class="header__search-checkbox">
+                    <div class="header__search hide-on-mobile">
                         <div class="header__search-input-wrap">
                             <input placeholder="Nhập để tìm kiếm sản phẩm" type="text" class="header__search-input">
                             <!-- Search history -->
@@ -169,7 +209,6 @@
                         <button class="header__search-btn opacity">
                             <i class="header__search-btn-icon fa-solid fa-magnifying-glass"></i></button>
                     </div>
-
                     <div class="header__cart">
                         <div class="header__cart-wrap">
                             <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
@@ -323,12 +362,28 @@
 
                 </div>
             </div>
+            <div class="header-tablet-sort-bar">
+                <ul class="header-tablet-sort-bar-list">
+                    <li class="header-tablet-sort-bar-item">
+                        <a href="" class="header-tablet-sort-bar-link">Liên quan</a>
+                    </li>
+                    <li class="header-tablet-sort-bar-item header-tablet-sort-bar-item--active">
+                        <a href="" class="header-tablet-sort-bar-link">Mới nhất</a>
+                    </li>
+                    <li class="header-tablet-sort-bar-item">
+                        <a href="" class="header-tablet-sort-bar-link">Bán chạy</a>
+                    </li>
+                    <li class="header-tablet-sort-bar-item">
+                        <a href="" class="header-tablet-sort-bar-link">Giá</a>
+                    </li>
+                </ul>
+            </div>
         </header>
 
         <div class="app__container">
-            <div class="grid">
-                <div class="grid__row app__content">
-                    <div class="grid-column-2">
+            <div class="grid wide">
+                <div class="row sm-gutter app__content">
+                    <div class="col l-2 m-0 c-0">
                         <nav class="category">
                             <h3 class="category__heading">
                                 <i class="category__heading-icon fa-solid fa-list-ul"></i>
@@ -350,8 +405,8 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="grid-column-10">
-                        <div class="home-filter">
+                    <div class="col l-10 m-12 c-12">
+                        <div class="home-filter hide-on-mobile-tablet">
                             <span class="home-filter-label">Sắp xếp theo</span>
                             <button class="btn btn-home-filter btn--active">Phổ biến</button>
                             <button class="btn btn-home-filter">Mới nhất</button>
@@ -384,8 +439,8 @@
                         </div>
 
                         <div class="home-product">
-                            <div class="grid__row">
-                                <div class="grid-column-2-4">
+                            <div class="row sm-gutter">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="#" class="home-product-item">
                                         <div style="background-image: url(https://cf.shopee.vn/file/sg-11134201-23010-4ke58nebzemv85);"
                                             class="home-product-item__img"></div>
@@ -429,7 +484,7 @@
                                     </a>
                                 </div>
 
-                                <div class="grid-column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="#" class="home-product-item">
                                         <div style="background-image: url(https://cf.shopee.vn/file/sg-11134201-23010-4ke58nebzemv85);"
                                             class="home-product-item__img"></div>
@@ -473,7 +528,7 @@
                                     </a>
                                 </div>
 
-                                <div class="grid-column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="#" class="home-product-item">
                                         <div style="background-image: url(https://cf.shopee.vn/file/sg-11134201-23010-4ke58nebzemv85);"
                                             class="home-product-item__img"></div>
@@ -517,7 +572,7 @@
                                     </a>
                                 </div>
 
-                                <div class="grid-column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="#" class="home-product-item">
                                         <div style="background-image: url(https://cf.shopee.vn/file/sg-11134201-23010-4ke58nebzemv85);"
                                             class="home-product-item__img"></div>
@@ -561,7 +616,7 @@
                                     </a>
                                 </div>
 
-                                <div class="grid-column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="#" class="home-product-item">
                                         <div style="background-image: url(https://cf.shopee.vn/file/sg-11134201-23010-4ke58nebzemv85);"
                                             class="home-product-item__img"></div>
@@ -605,7 +660,7 @@
                                     </a>
                                 </div>
 
-                                <div class="grid-column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="#" class="home-product-item">
                                         <div style="background-image: url(https://cf.shopee.vn/file/sg-11134201-23010-4ke58nebzemv85);"
                                             class="home-product-item__img"></div>
@@ -649,7 +704,7 @@
                                     </a>
                                 </div>
 
-                                <div class="grid-column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="#" class="home-product-item">
                                         <div style="background-image: url(https://cf.shopee.vn/file/sg-11134201-23010-4ke58nebzemv85);"
                                             class="home-product-item__img"></div>
@@ -693,7 +748,7 @@
                                     </a>
                                 </div>
 
-                                <div class="grid-column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="#" class="home-product-item">
                                         <div style="background-image: url(https://cf.shopee.vn/file/sg-11134201-23010-4ke58nebzemv85);"
                                             class="home-product-item__img"></div>
@@ -737,7 +792,7 @@
                                     </a>
                                 </div>
 
-                                <div class="grid-column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="#" class="home-product-item">
                                         <div style="background-image: url(https://cf.shopee.vn/file/sg-11134201-23010-4ke58nebzemv85);"
                                             class="home-product-item__img"></div>
@@ -781,7 +836,7 @@
                                     </a>
                                 </div>
 
-                                <div class="grid-column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="#" class="home-product-item">
                                         <div style="background-image: url(https://cf.shopee.vn/file/sg-11134201-23010-4ke58nebzemv85);"
                                             class="home-product-item__img"></div>
@@ -825,6 +880,221 @@
                                     </a>
                                 </div>
 
+                                <div class="col l-2-4 m-4 c-6">
+                                    <a href="#" class="home-product-item">
+                                        <div style="background-image: url(https://cf.shopee.vn/file/sg-11134201-23010-4ke58nebzemv85);"
+                                            class="home-product-item__img"></div>
+                                        <h4 class="home-product-item__name">Quạt hút gió tản nhiệt laptop Coolcold ICE
+                                            TROLL</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">1.000.000đ</span>
+                                            <span class="home-product-item__price-current">700.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__like home-product-item__liked">
+                                            <i
+                                                class="home-product-item-like-icon home-product-item-like-icon-empty fa-regular fa-heart"></i>
+                                            <i
+                                                class="home-product-item-like-icon home-product-item-like-icon-fill fa-solid fa-heart"></i>
+                                        </div>
+
+                                        <div class="home-product-item__footer">
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__rating-icon fa-solid fa-star"></i>
+                                                <i class="home-product-item__rating-icon fa-solid fa-star"></i>
+                                                <i class="home-product-item__rating-icon fa-solid fa-star"></i>
+                                                <i class="home-product-item__rating-icon fa-solid fa-star"></i>
+                                                <i class="home-product-item__rating-icon fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="home-product-item__sell">
+                                                <span class="home-product-item__sold">Đã bán</span>
+                                                <span class="home-product-item__sold-quantity">2.6k</span>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__country">
+                                            Nước ngoài
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <i class="fa-solid fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">30%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col l-2-4 m-4 c-6">
+                                    <a href="#" class="home-product-item">
+                                        <div style="background-image: url(https://cf.shopee.vn/file/sg-11134201-23010-cm5umjoizemv07);"
+                                            class="home-product-item__img"></div>
+                                        <h4 class="home-product-item__name">Tai nghe chụp tai gaming ONIKUMA K5 chuyên
+                                            game có mic đẳng cấp dành cho game thủ</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">2.000.000đ</span>
+                                            <span class="home-product-item__price-current">1.000.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__like home-product-item__liked">
+                                            <i
+                                                class="home-product-item-like-icon home-product-item-like-icon-empty fa-regular fa-heart"></i>
+                                            <i
+                                                class="home-product-item-like-icon home-product-item-like-icon-fill fa-solid fa-heart"></i>
+                                        </div>
+
+                                        <div class="home-product-item__footer">
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__rating-icon fa-solid fa-star"></i>
+                                                <i class="home-product-item__rating-icon fa-solid fa-star"></i>
+                                                <i class="home-product-item__rating-icon fa-solid fa-star"></i>
+                                                <i class="home-product-item__rating-icon fa-solid fa-star"></i>
+                                                <i class="home-product-item__rating-icon fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="home-product-item__sell">
+                                                <span class="home-product-item__sold">Đã bán</span>
+                                                <span class="home-product-item__sold-quantity">1k</span>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__country">
+                                            Nước ngoài
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <i class="fa-solid fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">30%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col l-2-4 m-4 c-6">
+                                    <a href="#" class="home-product-item">
+                                        <div style="background-image: url(https://cf.shopee.vn/file/sg-11134201-23010-4ke58nebzemv85);"
+                                            class="home-product-item__img"></div>
+                                        <h4 class="home-product-item__name">Quạt hút gió tản nhiệt laptop Coolcold ICE
+                                            TROLL</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">1.000.000đ</span>
+                                            <span class="home-product-item__price-current">700.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__like home-product-item__liked">
+                                            <i
+                                                class="home-product-item-like-icon home-product-item-like-icon-empty fa-regular fa-heart"></i>
+                                            <i
+                                                class="home-product-item-like-icon home-product-item-like-icon-fill fa-solid fa-heart"></i>
+                                        </div>
+
+                                        <div class="home-product-item__footer">
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__rating-icon fa-solid fa-star"></i>
+                                                <i class="home-product-item__rating-icon fa-solid fa-star"></i>
+                                                <i class="home-product-item__rating-icon fa-solid fa-star"></i>
+                                                <i class="home-product-item__rating-icon fa-solid fa-star"></i>
+                                                <i class="home-product-item__rating-icon fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="home-product-item__sell">
+                                                <span class="home-product-item__sold">Đã bán</span>
+                                                <span class="home-product-item__sold-quantity">2.6k</span>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__country">
+                                            Nước ngoài
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <i class="fa-solid fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">30%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col l-2-4 m-4 c-6">
+                                    <a href="#" class="home-product-item">
+                                        <div style="background-image: url(https://cf.shopee.vn/file/sg-11134201-23010-4ke58nebzemv85);"
+                                            class="home-product-item__img"></div>
+                                        <h4 class="home-product-item__name">Quạt hút gió tản nhiệt laptop Coolcold ICE
+                                            TROLL</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">1.000.000đ</span>
+                                            <span class="home-product-item__price-current">700.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__like home-product-item__liked">
+                                            <i
+                                                class="home-product-item-like-icon home-product-item-like-icon-empty fa-regular fa-heart"></i>
+                                            <i
+                                                class="home-product-item-like-icon home-product-item-like-icon-fill fa-solid fa-heart"></i>
+                                        </div>
+
+                                        <div class="home-product-item__footer">
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__rating-icon fa-solid fa-star"></i>
+                                                <i class="home-product-item__rating-icon fa-solid fa-star"></i>
+                                                <i class="home-product-item__rating-icon fa-solid fa-star"></i>
+                                                <i class="home-product-item__rating-icon fa-solid fa-star"></i>
+                                                <i class="home-product-item__rating-icon fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="home-product-item__sell">
+                                                <span class="home-product-item__sold">Đã bán</span>
+                                                <span class="home-product-item__sold-quantity">2.6k</span>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__country">
+                                            Nước ngoài
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <i class="fa-solid fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">30%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col l-2-4 m-4 c-6">
+                                    <a href="#" class="home-product-item">
+                                        <div style="background-image: url(https://cf.shopee.vn/file/sg-11134201-23010-4ke58nebzemv85);"
+                                            class="home-product-item__img"></div>
+                                        <h4 class="home-product-item__name">Quạt hút gió tản nhiệt laptop Coolcold ICE
+                                            TROLL</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">1.000.000đ</span>
+                                            <span class="home-product-item__price-current">700.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__like home-product-item__liked">
+                                            <i
+                                                class="home-product-item-like-icon home-product-item-like-icon-empty fa-regular fa-heart"></i>
+                                            <i
+                                                class="home-product-item-like-icon home-product-item-like-icon-fill fa-solid fa-heart"></i>
+                                        </div>
+
+                                        <div class="home-product-item__footer">
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__rating-icon fa-solid fa-star"></i>
+                                                <i class="home-product-item__rating-icon fa-solid fa-star"></i>
+                                                <i class="home-product-item__rating-icon fa-solid fa-star"></i>
+                                                <i class="home-product-item__rating-icon fa-solid fa-star"></i>
+                                                <i class="home-product-item__rating-icon fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="home-product-item__sell">
+                                                <span class="home-product-item__sold">Đã bán</span>
+                                                <span class="home-product-item__sold-quantity">2.6k</span>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__country">
+                                            Nước ngoài
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <i class="fa-solid fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">30%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
 
 
                             </div>
@@ -870,9 +1140,9 @@
         </div>
 
         <footer class="footer">
-            <div class="grid">
-                <div class="grid__row">
-                    <div class="grid-column-2-4">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Chăm sóc khách hàng</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -886,7 +1156,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid-column-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Về Shopee</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -900,7 +1170,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid-column-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <div class="grid-column-2-4-1">
                             <h3 class="footer__heading">Thanh toán</h3>
                             <ul class="footer-list-img">
@@ -941,10 +1211,10 @@
                                 </li>
                             </ul>
                         </div>
-                       
-                        
+
+
                     </div>
-                    <div class="grid-column-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Theo dõi chúng tôi trên</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -967,16 +1237,18 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid-column-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Tải ứng dụng Shopee ngay</h3>
                         <div class="footer__download">
                             <img src="./assets/img/QR%20CODE.png" alt="Download QR" class="footer__download-qr">
                             <div class="footer__download-apps">
                                 <a href="" class="footer__download-app-link">
-                                    <img src="./assets/img/google_play.png" alt="Google Play" class="footer__download-app-img">
+                                    <img src="./assets/img/google_play.png" alt="Google Play"
+                                        class="footer__download-app-img">
                                 </a>
                                 <a href="" class="footer__download-app-link">
-                                    <img src="./assets/img/app_store.png" alt="App Store" class="footer__download-app-img">
+                                    <img src="./assets/img/app_store.png" alt="App Store"
+                                        class="footer__download-app-img">
                                 </a>
                             </div>
                         </div>
@@ -984,7 +1256,7 @@
                 </div>
 
                 <div class="footer__bottom">
-                    <div class="grid__row footer__country">
+                    <div class="row footer__country">
                         <p class="footer__text">© 2023 Shopee. Tất cả các quyền được bảo lưu.</p>
                         <ul class="footer__country-list">
                             <li class="footer__country-item">Quốc gia & Khu vực: </li>
@@ -1012,8 +1284,8 @@
         <div class="modal__overlay"></div>
         <div class="modal__body">
             <div class="modal__inner">
-    <!-- Register form -->
-    <div class="auth-form register__form">
+                <!-- Register form -->
+                <div class="auth-form register__form">
                     <div class="auth-form__header">
                         <h3 class="auth-form__heading">Đăng ký</h3>
                     </div>
@@ -1049,14 +1321,14 @@
                                 Google
                             </a>
                         </div>
-    
+
                         <div class="auth-form__extra">
                             Bằng việc đăng kí, bạn đã đồng ý với Shopee về
                             <br>
                             <a href="" class="auth-form__policy">Điều khoản dịch vụ</a> &
                             <a href="" class="auth-form__policy">Chính sách bảo mật</a>
                         </div>
-    
+
                         <div class="auth-form__convert">
                             <span class="auth-form__text-convert">Bạn đã có tài khoản?</span>
                             <a href="#" class="auth-form__convert-btn auth-form__convert-btn-register">Đăng nhập</a>
@@ -1065,8 +1337,8 @@
 
                 </div>
 
-    <!-- Login form -->
-    <div class="auth-form login__form">
+                <!-- Login form -->
+                <div class="auth-form login__form">
                     <div class="auth-form__header">
                         <h3 class="auth-form__heading">Đăng nhập</h3>
                     </div>
@@ -1074,7 +1346,8 @@
                     <div class="auth-form__content">
                         <div class="auth-form__form">
                             <div class="auth-form__group">
-                                <input type="text" placeholder="Số điện thoại/Email/Tên đăng nhập" class="auth-form__input">
+                                <input type="text" placeholder="Số điện thoại/Email/Tên đăng nhập"
+                                    class="auth-form__input">
                             </div>
                             <div class="auth-form__group">
                                 <input type="password" placeholder="Mật khẩu" class="auth-form__input">
@@ -1108,8 +1381,8 @@
                                 <i class="fa-brands fa-apple auth-form-apple auth-form-icon"></i>
                                 Apple
                             </a>
-                        </div>  
-    
+                        </div>
+
                         <div class="auth-form__convert">
                             <span class="auth-form__text-convert">Bạn mới biết đến Shopee?</span>
                             <a href="#" class="auth-form__convert-btn auth-form__convert-btn-login">Đăng ký</a>
@@ -1118,10 +1391,11 @@
 
                 </div>
 
-    </div>  
+            </div>
         </div>
     </div>
 
 </body>
-    <script src="./assets/js/main.js"></script>
+<script src="./assets/js/main.js"></script>
+
 </html>
